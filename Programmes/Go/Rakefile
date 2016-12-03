@@ -1,0 +1,8 @@
+load '../common.rake'
+
+default(:exemple_go, "spec")
+
+default(:produit_matrices, "spec")
+
+default(:min_max, "spec")
+

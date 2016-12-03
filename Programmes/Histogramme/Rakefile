@@ -1,0 +1,7 @@
+load '../common.rake'
+
+default(:histogramme, "spec")
+_default(:histogramme, "bm")
+
+default(:palindromes, "spec")
+_default(:palindromes, "bm")

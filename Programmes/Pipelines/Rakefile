@@ -1,0 +1,14 @@
+load '../common.rake'
+
+default(:mots_tries, "spec")
+
+default(:jackson, "spec")
+
+default(:jackson_bis, "spec")
+
+default(:justification, "spec")
+
+default(:eval_polynomes, "spec")
+
+=begin
+=end

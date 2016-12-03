@@ -1,0 +1,44 @@
+load '../common.rake'
+
+task :default => :WIP
+
+task :WIP => [:sommation_tableau]
+
+task :sommation_tableau do
+ sh %{ruby sommation-tableau.rb}
+end
+
+task :racine do
+ sh %{ruby racine.rb}
+end
+
+task :interblocage do
+ sh %{ruby interblocage.rb}
+end
+
+task :maximum2 do
+ sh %{ruby maximum2.rb}
+end
+
+task :maximum do
+ sh %{ruby maximum.rb}
+end
+
+task :competition3 do
+ sh %{ruby competition3.rb}
+end
+
+task :competition2 do
+ sh %{ruby competition2.rb}
+end
+
+task :competition do
+ sh %{ruby competition.rb}
+end
+
+task :entrelacement do
+ sh %{ruby entrelacement.rb}
+end
+
+
+

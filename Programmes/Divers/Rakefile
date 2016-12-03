@@ -1,0 +1,16 @@
+load '../common.rake'
+
+_default(:ruby_vs_java, "spec")  # Pas vrais tests :(
+
+default(:wc, "spec")
+default(:factoriel, "spec")
+default(:sommation_tableau, "spec")
+default(:arbre, "spec")
+default(:pi, "spec")
+default(:somme_tableaux, "spec")
+default(:qsort, "spec")
+default(:maximum, "spec")
+default(:fibo, "spec")
+
+=begin
+=end

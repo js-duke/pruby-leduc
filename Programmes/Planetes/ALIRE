@@ -1,0 +1,13 @@
+Depend du gem ruby-processing
+
+C'est ce gem qui -- je crois -- definit la commande rp5.
+
+Par contre, cette commande est dans
+~tremblay/.rvm/gems/jruby-1.7.19/bin/rp5
+
+Je crois qu'il faut aussi que processing soit installe quelque
+part... mais pas clair ou j'ai mis cela.
+
+https://github.com/jashkenas/ruby-processing/wiki
+xs
+

@@ -1,0 +1,73 @@
+INSTALLATION SUR japet (compte local)... 
+=====================================
+
+A VERIFIER!!
+
+Installation de PRuby et des gems associes
+------------------------------------------
+
+$ git clone ...
+$ cd ~/PRuby
+$ bundle install --path vendor/bundle
+$ rake test
+
+
+Installation du gem pour pruby
+------------------------------
+
+$ Aller chercher le gem pruby-0.0.1.gem
+$ gem install --local pruby-0-0.1.gem
+
+
+
+INSTALLATION SUR MACHINE LOCALE (root ou sudo)
+==============================================
+
+Installation de RVM
+-------------------
+
+SOURCE: https://rvm.io/rvm/install
+
+$ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+
+$ \curl -sSL https://get.rvm.io | bash -s stable
+
+
+$ source ~/.rvm/scripts/rvm
+
+NOTE: Il faut ajouter la ligne suivante dans le fichier ~/.bash_profile:
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+$ rvm install jruby
+
+
+$ rvm list 
+
+=* jruby-1.7.19 [ x86_64 ]
+
+# => - current
+# =* - current && default
+#  * - default
+
+
+Installation de bundler
+-----------------------
+
+$ gem install bundler
+
+
+Installation de PRuby et des gems associes
+------------------------------------------
+
+$ git clone ...
+$ cd ~/PRuby
+$ bundle install
+$ rake test
+
+
+Installation du gem pour pruby
+------------------------------
+
+$ Aller chercher le gem pruby-0.0.1.gem
+$ gem install --local pruby-0-0.1.gem

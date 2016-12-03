@@ -1,0 +1,14 @@
+load '../common.rake'
+
+
+_default('others'.to_sym, "spec")
+
+default('word-count'.to_sym, "spec")
+
+=begin
+default('depot-git'.to_sym, "spec")
+
+default('mots_tries'.to_sym, "spec")
+
+default('jackson'.to_sym, "spec")
+=end

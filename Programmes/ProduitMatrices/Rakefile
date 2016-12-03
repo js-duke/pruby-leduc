@@ -1,0 +1,10 @@
+load '../common.rake'
+
+
+task :mm do
+  sh %{ruby mm.rb}
+end
+
+default(:produit_matrices, "spec")
+
+_default(:produit_matrices, "bm")

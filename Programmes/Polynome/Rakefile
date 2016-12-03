@@ -1,0 +1,5 @@
+load '../common.rake'
+
+default(:polynome, "spec")
+
+_default(:polynome, "bm")

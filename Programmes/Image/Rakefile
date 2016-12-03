@@ -1,0 +1,9 @@
+load '../common.rake'
+
+task :default do
+  #sh %{ruby gen.rb >> i256.ppm}
+end
+
+_default(:mandelbrot, "to_ppm")
+
+default(:image, "spec")

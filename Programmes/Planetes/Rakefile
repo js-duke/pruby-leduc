@@ -1,0 +1,18 @@
+load '../common.rake'
+
+#task :default => :doc
+
+task :doc do
+  sh %(yard doc --yardopts ~/.yardopts .)
+end
+  
+default(:planete, "spec")
+default(:systeme_planetaire, "spec")
+default(:systeme_planetaire_par, "spec")
+
+_default(:systeme_planetaire, "bm")
+
+task :_default do
+  sh %{rp5 run systeme_planetaire_rp5.rb}
+end
+

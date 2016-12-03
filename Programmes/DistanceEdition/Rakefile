@@ -1,0 +1,4 @@
+load '../common.rake'
+
+default(:distance_edition, "spec")
+

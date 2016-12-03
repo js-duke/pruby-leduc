@@ -1,0 +1,3 @@
+Contient divers petits programmes pour essayer des choses en Ruby.
+
+Contient aussi divers benchmarks.

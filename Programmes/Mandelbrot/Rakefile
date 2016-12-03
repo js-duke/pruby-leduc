@@ -1,0 +1,5 @@
+load '../common.rake'
+
+task :default do
+  #sh %{rp5 run mandelbrot_rp5.rb}
+end

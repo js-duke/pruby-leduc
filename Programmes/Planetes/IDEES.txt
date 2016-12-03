@@ -1,0 +1,18 @@
+
+- Faire une version Barnes-Hut avec quadtree?
+
+- Faire varier le comportement des planetes:
+  * Si "tres" pres: rebondissent, explosent, etc.
+
+ Note; Ce dernier point pourrait etre une idee pour des bonus dans un
+ devoir. Voir: COS 126 Programming Assignment: N-Body Simulation
+ (Sedgewick & Wayne)
+
+ Challenge for the bored. There are limitless opportunities for
+ additional excitement and discovery here. Try adding other features,
+ such as merging bodies when they collide. Or, make the simulation
+ three-dimensional by doing calculations for x, y, and z coordinates,
+ then using the z coordinate to vary the sizes of the planets.  Add a
+ rocket ship that launches from one planet and has to land on
+ another. Allow the rocket ship to exert force with consumption of
+ fuel

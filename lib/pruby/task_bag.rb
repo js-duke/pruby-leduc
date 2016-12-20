@@ -110,6 +110,12 @@ module PRuby
       self
     end
 
+    # Lance une exception si on est en train de faire un each
+    # sinon fait le get
+    def fail_get
+      fail("*** Lorsque each est utilise, il ne faut pas faire d'appel a get")
+    end
+
     # Retire une tache du sac de taches. Bloque si le sac est
     #   actuellement vide mais que d'autres taches pourraient etre
     #   ajoutees parce que des threads sont encore actifs.
@@ -118,9 +124,7 @@ module PRuby
     #   lorsqu'il n'y a plus de taches... et qu'il ne pourra plus y en
     #   avoir (tous les nb_threads threads sont en attente d'une tache).
     #
-    def get
-      puts "TaskBag#get" if DEBUG
-
+    def private_get
       task = nil
       @mutex.synchronize do
         loop do
@@ -181,14 +185,11 @@ module PRuby
     # @require aucun appel a get n'est effectue sur le sac!
     #
     def each
-      alias :old_get :get
-      def self.get
-        fail "*** Lorsque each est utilise, il ne faut pas faire d'appel a get"
-      end
-
-      while task = old_get
+      define_singleton_method(:get) { fail_get }
+      while task = private_get
         yield( task )
-      end
+      end  
+      define_singleton_method(:get) { private_get }
     end
 
     # Attente jusqu'a ce que le sac soit devenu inactif parce que vide
@@ -213,7 +214,10 @@ module PRuby
     def done?
       @termine
     end
+    
+    alias_method :get, :private_get
   end
 
   TaskPool = TaskBag
+  
 end
